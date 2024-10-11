@@ -1,11 +1,11 @@
 html, body {
-  background-color: #eee;
+  background-color: #fff;
   font-family: 'Roboto', sans-serif;
   color: #111;
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 55px;
   margin-bottom: 50px;
 }
 
@@ -14,8 +14,14 @@ h2 {
   margin-bottom: 30px;
 }
 
-p {
-  font-size: 16px;
+p.text {
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+p.legal {
+  font-size: 12px;
   line-height: 1.5;
 }
 
@@ -36,7 +42,7 @@ a:hover {
 }
 
 .header img {
-  height: 100px;
+  height: 400px;
 }
 
 .container {
@@ -50,4 +56,31 @@ a:hover {
 .content {
   margin-top: 100px;
   margin-bottom: 80px;
+}
+
+.artist {
+  display: flex;
+  flex-direction: row;
+  gap: 45px;
+}
+
+.artist img {
+  border-radius: 10px;
+}
+
+.artist a {
+  font-size: 45px;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  padding: 24px 0;
+}
+
+footer span {
+  flex: 1 1 0;
+  text-align: end;
 }
