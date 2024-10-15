@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
     <title>Tricentenario</title>
   </head>
@@ -38,14 +40,24 @@
         </h2>
 
         <p class="text">
-          La exposición estará dispnible a partir del 18 de octubre de 2024 en el Parque Urbano Cumandá en Quito, Ecuador.
+          La exposición estará dispnible a partir del 18 de octubre de 2024 en el Parque Urbano Cumandá en Quito, Ecuador. Asegúrate de descargar la app con los botones siguientes.
         </p>
 
         <hr />
 
         <p class="text">
-          The exposition will be available from October 18th 2024 at the Parque Urbano Cumandá in Quito, Ecuador.
+          The exposition will be available from October 18th 2024 at the Parque Urbano Cumandá in Quito, Ecuador. Make sure to get the app with the buttons below.
         </p>
+
+        <div class="content download">
+          <a href="https://play.google.com/store/apps/details?id=com.tricentenario.tricentenario">
+            <img src="/img/badges/play-store.png" alt="play store" />
+          </a>
+  
+          <a href="https://apps.apple.com/ec/app/tricentenario/id6736583178">
+            <img src="/img/badges/app-store.png" alt="play store" />
+          </a>
+        </div>
 
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1450.260080055788!2d-78.51207684818608!3d-0.22864909847546883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59985319b006d%3A0xb81126967776eac2!2sCumand%C3%A1%20Parque%20Urbano!5e0!3m2!1sen!2sec!4v1728661345916!5m2!1sen!2sec"
@@ -57,6 +69,35 @@
           referrerpolicy="no-referrer-when-downgrade"
         >
         </iframe>
+      </div>
+
+      <div class="content">
+        <h2>
+          Videos
+        </h2>
+
+        <div class="carousel">
+          <div>
+            <video controls>
+              <source src="/video/1smaller.mp4">
+            </video>
+          </div>
+          <div>
+            <video controls>
+              <source src="/video/2smaller.mp4">
+            </video>
+          </div>
+          <div>
+            <video controls>
+              <source src="/video/3smaller.mp4">
+            </video>
+          </div>
+          <div>
+            <video controls>
+              <source src="/video/4smaller.mp4">
+            </video>
+          </div>
+        </div>
       </div>
 
       <div class="content">
@@ -95,5 +136,26 @@
         &copy; All rights reserved - Andrés Marcial Coba 2024
       </span>
     </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.carousel').slick({
+          infinite: true,
+          slidesToShow: 1,
+          arrows: false,
+          dots: true
+        });
+
+        $('.carousel').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+          $('video').each(function(){
+            this.pause();
+          });
+        });
+      });
+    </script>
   </body>
 </html>

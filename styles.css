@@ -42,7 +42,13 @@ a:hover {
 }
 
 .header img {
-  height: 400px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .header img {
+    height: 400px;
+  }
 }
 
 .container {
@@ -60,8 +66,14 @@ a:hover {
 
 .artist {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 45px;
+}
+
+@media only screen and (min-width: 600px) {
+  .artist {
+    flex-direction: row;
+  }
 }
 
 .artist img {
@@ -71,6 +83,51 @@ a:hover {
 .artist a {
   font-size: 45px;
   text-decoration: none;
+}
+
+.download {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.download img {
+  width: 200px;
+  height: auto;
+}
+
+@media only screen and (min-width: 600px) {
+  .download {
+    flex-direction: row;
+  }
+
+  .download img {
+    width: auto;
+    height: 60px;
+  }
+}
+
+.carousel video {
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .carousel video {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.carousel > div {
+  width: 100%;
+  text-align: center;
+}
+
+.carousel .slick-arrow::before {
+  color: black;
+  font-size: 32px;
 }
 
 footer {
